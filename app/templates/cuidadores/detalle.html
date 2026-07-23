@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}{{ cuidador.nombre }} | Cuida a tus Mayores{% endblock %}
+{% block content %}
+<div class="titulo-con-accion">
+    <div>
+        <a class="volver" href="{{ url_for('cuidadores.lista') }}">← Volver al listado</a>
+        <h1>{{ cuidador.nombre }}</h1>
+        <p>{{ cuidador.especialidad }} · {{ cuidador.comuna }}</p>
+    </div>
+    <div class="acciones">
+        <a class="boton" href="{{ url_for('cuidadores.editar', cuidador_id=cuidador.id) }}">Editar</a>
+        <a class="boton boton-peligro" href="{{ url_for('cuidadores.eliminar', cuidador_id=cuidador.id) }}">Eliminar</a>
+    </div>
+</div>
+
+<section class="detalle-grid">
+    <article class="panel">
+        <h2>Información del perfil</h2>
+        <dl>
+            <div><dt>Correo</dt><dd>{{ cuidador.correo }}</dd></div>
+            <div><dt>Teléfono</dt><dd>{{ cuidador.telefono }}</dd></div>
+            <div><dt>Comuna</dt><dd>{{ cuidador.comuna }}</dd></div>
+            <div><dt>Especialidad</dt><dd>{{ cuidador.especialidad }}</dd></div>
+            <div><dt>Experiencia</dt><dd>{{ cuidador.experiencia_anios }} año(s)</dd></div>
+            <div><dt>Tarifa diaria</dt><dd>${{ "{:,.0f}".format(cuidador.tarifa_diaria).replace(',', '.') }}</dd></div>
+            <div><dt>Disponibilidad</dt><dd>{{ "Disponible" if cuidador.disponible else "No disponible" }}</dd></div>
+            <div><dt>Validación</dt><dd><span class="estado estado-{{ cuidador.estado_validacion|lower }}">{{ cuidador.estado_validacion }}</span></dd></div>
+        </dl>
+    </article>
+    <article class="panel">
+        <h2>Descripción</h2>
+        <p class="texto-largo">{{ cuidador.descripcion or "Sin descripción registrada." }}</p>
+        <p class="dato-secundario">Registro creado el {{ cuidador.creado_en.strftime('%d-%m-%Y') }}.</p>
+    </article>
+</section>
+{% endblock %}

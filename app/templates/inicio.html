@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Inicio | Cuida a tus Mayores{% endblock %}
+{% block content %}
+<section class="hero">
+    <div>
+        <span class="etiqueta">Prototipo web</span>
+        <h1>Administración de cuidadores</h1>
+        <p>CRUD mínimo viable para registrar, consultar, editar, validar y eliminar perfiles de cuidadores.</p>
+        <div class="acciones">
+            <a class="boton" href="{{ url_for('cuidadores.lista') }}">Ver cuidadores</a>
+            <a class="boton boton-secundario" href="{{ url_for('cuidadores.crear') }}">Registrar cuidador</a>
+        </div>
+    </div>
+</section>
+
+<section class="metricas" aria-label="Resumen del sistema">
+    <article><strong>{{ total }}</strong><span>Total registrados</span></article>
+    <article><strong>{{ aprobados }}</strong><span>Aprobados</span></article>
+    <article><strong>{{ pendientes }}</strong><span>Pendientes</span></article>
+    <article><strong>{{ disponibles }}</strong><span>Disponibles</span></article>
+</section>
+
+<section class="panel">
+    <h2>Operaciones incluidas</h2>
+    <div class="cuadricula-4">
+        <article><h3>Crear</h3><p>Registrar perfiles de cuidadores con sus datos principales.</p></article>
+        <article><h3>Leer</h3><p>Listar, buscar, filtrar y consultar el detalle de cada perfil.</p></article>
+        <article><h3>Actualizar</h3><p>Editar antecedentes, disponibilidad, tarifa y validación.</p></article>
+        <article><h3>Eliminar</h3><p>Eliminar un registro mediante una pantalla de confirmación.</p></article>
+    </div>
+</section>
+{% endblock %}
