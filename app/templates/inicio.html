@@ -1,11 +1,14 @@
+<!--código principal de la plantilla de inicio para la 
+aplicación web de administración de cuidadores. Esta plantilla extiende de "base.html" y define el contenido específico para la página de inicio, 
+incluyendo un encabezado hero, métricas del sistema y un panel que describe las operaciones CRUD disponibles.-->
+
 {% extends "base.html" %}
 {% block title %}Inicio | Cuida a tus Mayores{% endblock %}
 {% block content %}
 <section class="hero">
     <div>
-        <span class="etiqueta">Prototipo web</span>
+        <span class="etiqueta">Prototipo </span>
         <h1>Administración de cuidadores</h1>
-        <p>CRUD mínimo viable para registrar, consultar, editar, validar y eliminar perfiles de cuidadores.</p>
         <div class="acciones">
             <a class="boton" href="{{ url_for('cuidadores.lista') }}">Ver cuidadores</a>
             <a class="boton boton-secundario" href="{{ url_for('cuidadores.crear') }}">Registrar cuidador</a>

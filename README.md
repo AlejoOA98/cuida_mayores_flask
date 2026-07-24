@@ -1,10 +1,10 @@
 # Cuida a tus Mayores — CRUD con Flask
 
-Prototipo académico para la **Sumativa 2 de Taller de Desarrollo Web y Móvil**. Implementa un CRUD web de cuidadores, adaptado a la propuesta “Cuida a tus Mayores”.
+Prototipo  para la **Sumativa 2 de Taller de Desarrollo Web y Móvil**. 
 
-## Funcionalidades
+## Dentro de las funcionalidades
 
-- Crear perfiles de cuidadores.
+- Posibildiad de crear perfiles de cuidadores.
 - Listar, buscar y filtrar cuidadores.
 - Consultar el detalle de un perfil.
 - Editar antecedentes, disponibilidad y estado de validación.
