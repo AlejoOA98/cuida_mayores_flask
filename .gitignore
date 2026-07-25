@@ -4,3 +4,5 @@ __pycache__/
 instance/*.db
 .env
 .vscode/
+.DS_Store
+.DS_Store
