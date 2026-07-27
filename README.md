@@ -6,6 +6,7 @@
 **Asignatura:** Taller de Desarrollo Web y Móvil — APTC106  
 **Evaluación:** Semana 6 — Sumativa 2  
 **Integrantes:** Diego Mulatti Morales · Alejandro Ortega Aranda · Omar Sanhueza Becar  
+**Repositorio:** https://github.com/dmulattis/cuida_mayores_flask
 
 </div>
 
@@ -366,11 +367,11 @@ instance/*.db
 
 ---
 
-
+Con esto se garantiza un historial de cambios trazable y un repositorio limpio de archivos temporales o sensibles.
 
 ---
 
-# 1o. AUTORES
+# 10. AUTORES
 
 - **Diego Mulatti Morales**
 - **Alejandro Ortega Aranda**
