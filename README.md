@@ -370,7 +370,7 @@ instance/*.db
 
 ---
 
-# 1o. AUTORES
+# 10. AUTORES
 
 - **Diego Mulatti Morales**
 - **Alejandro Ortega Aranda**
